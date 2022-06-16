@@ -14,6 +14,10 @@ input {
   text-align: left;
 }
 
+input:required {
+  border-color: rgb(238, 110, 115);
+}
+
 ::placeholder {
   color: white;
 }
