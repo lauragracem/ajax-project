@@ -1,0 +1,28 @@
+.container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  margin-top: 3rem;
+  margin-bottom: -4.5rem;
+  margin-right: 3.5rem;
+}
+
+.column-1 {
+  display: flex;
+  justify-content: center;
+  margin-top: -8rem;
+}
+
+.column-2 {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
