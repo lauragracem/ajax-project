@@ -3,6 +3,11 @@
   width: 100vw;
 }
 
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
 .row {
   display: flex;
   justify-content: center;

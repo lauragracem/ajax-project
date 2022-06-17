@@ -47,3 +47,20 @@ a {
   margin-bottom: 1rem;
   letter-spacing: 0.35rem;
 }
+
+#enter-habit {
+  background-color: rgb(238, 110, 115, 0.3);
+  border-style: none;
+  border-radius: 0.2rem;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  font-size: 18px;
+  text-align: left;
+}
+
+.submit {
+  border-style: none;
+  border-radius: 0.2rem;
+  background-color: rgb(238, 110, 115, 0.5);
+  color: white;
+}
