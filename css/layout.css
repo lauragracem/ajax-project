@@ -31,3 +31,14 @@ img {
   justify-content: center;
   margin-top: 1rem;
 }
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 400px;
+    height: auto;
+  }
+
+  img {
+    width: 60rem;
+  }
+}
