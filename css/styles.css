@@ -36,6 +36,7 @@ input:required {
   padding-left: 0.7rem;
   padding-bottom: 0.5rem;
   padding-right: 0.7rem;
+  cursor: pointer;
 }
 
 a {
@@ -46,6 +47,7 @@ a {
   margin-top: 1rem;
   margin-bottom: 1rem;
   letter-spacing: 0.35rem;
+  cursor: pointer;
 }
 
 #enter-habit {
@@ -63,4 +65,10 @@ a {
   border-radius: 0.2rem;
   background-color: rgb(238, 110, 115, 0.5);
   color: white;
+  padding: 0.672rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
 }
