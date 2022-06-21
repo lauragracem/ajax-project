@@ -12,6 +12,7 @@ $loginForm.addEventListener('submit', login);
 
 function login(event) {
   event.preventDefault();
+  getGraphs();
 }
 
 $loginButton.addEventListener('click', nextPage);
@@ -41,13 +42,15 @@ function createHabit(event) {
   createGraph();
 }
 
-// add habit to page -- render the habit listed
-// the habit names the graph
-// get graph svg
-
 var username = 'ajax-project';
 var secret = 'thisissecret';
 var id = '0';
+
+// get all user's graphs
+// have id start at graphs.length
+
+// on login hit graphs API & get total number of graphs.
+//
 
 function createGraph() {
   var json = {
@@ -69,17 +72,21 @@ function createGraph() {
   xhr.send(JSON.stringify(json));
 }
 
-// function getGraphs() {
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs');
-//   xhr.setRequestHeader('X-USER-TOKEN', secret);
+function getGraphs() {
 
-//   xhr.responseType = 'json';
-//   xhr.addEventListener('load', function () {
-//     console.log({ xhr });
-//   });
-//   xhr.send();
-// }
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs');
+  xhr.setRequestHeader('X-USER-TOKEN', secret);
+
+  xhr.responseType = 'json';
+  xhr.addEventListener('load', function () {
+    // console.log({ xhr });
+    // get graphs from respnose
+    // set id to graphs.length
+  });
+  xhr.send();
+}
+
 // var $tempEl = document.querySelector('.temp');
 // function getGraphSVG(id = 'color-graph') {
 //   var xhr = new XMLHttpRequest();
