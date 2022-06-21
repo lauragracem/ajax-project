@@ -81,8 +81,12 @@ function getGraphs() {
   xhr.responseType = 'json';
   xhr.addEventListener('load', function () {
     // console.log({ xhr });
+    var graphs = xhr.response.graphs;
     // get graphs from respnose
+    id = graphs.length;
     // set id to graphs.length
+    // console.log(graphs);
+    // console.log(id);
   });
   xhr.send();
 }
