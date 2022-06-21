@@ -38,33 +38,36 @@ function createHabit(event) {
   var $habit = document.createElement('li');
   $habit.textContent = $enterHabit.value;
   $ul.appendChild($habit);
+  createGraph();
 }
-
-// function enterHabit() {
-
-// }
-
-// enterHabit();
-
-// function renderHabit(habitList) {
-//   event.preventDefault();
-
-//   $addHabit.innerHTML = '';
-//   for (var i = 0; i < habitList.length; i++) {
-//     var habits = habitList[i];
-//     var habitEntry = createHabit(habits);
-//     $addHabit.appendChild(habitEntry);
-//   }
-// }
-
-// renderHabit();
 
 // add habit to page -- render the habit listed
 // the habit names the graph
 // get graph svg
 
-// var username = 'ajax-project';
-// var secret = 'thisissecret';
+var username = 'ajax-project';
+var secret = 'thisissecret';
+var id = '0';
+
+function createGraph() {
+  var json = {
+    id: 'graph-' + id,
+    name: $enterHabit.value,
+    unit: 'commit',
+    type: 'int',
+    color: 'ichou'
+  };
+  id++;
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'https://pixe.la/v1/users/' + username + '/graphs');
+  xhr.setRequestHeader('X-USER-TOKEN', secret);
+
+  xhr.responseType = 'json';
+  xhr.addEventListener('load', function () {
+  });
+  xhr.send(JSON.stringify(json));
+}
 
 // function getGraphs() {
 //   var xhr = new XMLHttpRequest();

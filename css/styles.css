@@ -10,6 +10,7 @@ form {
 
 input {
   background-color: rgb(238, 110, 115, 0.35);
+  color: white;
   border-style: none;
   border-radius: 0.2rem;
   margin-right: 2rem;
@@ -54,6 +55,7 @@ a {
   background-color: rgb(238, 110, 115, 0.3);
   border-style: none;
   border-radius: 0.2rem;
+  margin-top: 20rem;
   margin-right: 2rem;
   padding: 0.5rem;
   font-size: 18px;
@@ -65,10 +67,18 @@ a {
   border-radius: 0.2rem;
   background-color: rgb(238, 110, 115, 0.5);
   color: white;
+  margin-top: 20rem;
   padding: 0.672rem;
   cursor: pointer;
 }
 
 ul {
   list-style: none;
+}
+
+li {
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 0.15rem;
+  text-align: left;
 }
