@@ -19,6 +19,7 @@ $loginButton.addEventListener('click', nextPage);
 $guestLogin.addEventListener('click', nextPage);
 function nextPage(event) {
   switchView('habit-form');
+  getGraphs();
 }
 
 function switchView(view) {
