@@ -56,7 +56,7 @@ var secret = 'thisissecret';
 
 function createGraph() {
   var json = {
-    id: 'graph-' + data.nextId,
+    id: $enterHabit.value.replace(' ', '-').toLowerCase(),
     name: $enterHabit.value,
     unit: 'commit',
     type: 'int',

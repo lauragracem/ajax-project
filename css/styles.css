@@ -51,11 +51,23 @@ a {
   cursor: pointer;
 }
 
+.habit-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.row.habit {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+  padding-top: 3rem;
+}
+
 #enter-habit {
   background-color: rgb(238, 110, 115, 0.3);
   border-style: none;
   border-radius: 0.2rem;
-  margin-top: 20rem;
   margin-right: 2rem;
   padding: 0.5rem;
   font-size: 18px;
@@ -67,15 +79,15 @@ a {
   border-radius: 0.2rem;
   background-color: rgb(238, 110, 115, 0.5);
   color: white;
-  margin-top: 20rem;
   padding: 0.672rem;
   cursor: pointer;
 }
 
 ul {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding-left: 0;
+  height: 100%;
+  overflow: auto;
 }
 
 li {
@@ -87,6 +99,11 @@ li {
 
 .graph-container {
   width: 500px;
+}
+
+.row.input-field {
+  flex: 0;
+  padding-bottom: 5rem;
 }
 
 /* 'enter habit' input and 'submit' button need to stay in play--set position. */
