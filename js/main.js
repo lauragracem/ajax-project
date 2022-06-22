@@ -120,5 +120,3 @@ function getGraphSVG(id) {
   });
   xhr.send();
 }
-
-// getGraphSVG();
