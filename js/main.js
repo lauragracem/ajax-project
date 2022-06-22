@@ -96,22 +96,28 @@ function renderGraphs(graphs) {
   for (var i = 0; i < graphs.length; i++) {
     var name = graphs[i].name;
     var $li = document.createElement('li');
-    $li.textContent = name;
+    var $p = document.createElement('p');
+    $p.textContent = name;
+    var $div = document.createElement('div');
+    $div.setAttribute('id', graphs[i].id);
+    $li.appendChild($p);
+    $li.appendChild($div);
     $ul.appendChild($li);
+    getGraphSVG(graphs[i].id);
   }
 }
 
-// var $tempEl = document.querySelector('.temp');
-// function getGraphSVG(id = 'color-graph') {
-//   var xhr = new XMLHttpRequest();
-//   xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs/' + id);
-//   xhr.setRequestHeader('X-USER-TOKEN', secret);
+function getGraphSVG(id) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs/' + id);
+  xhr.setRequestHeader('X-USER-TOKEN', secret);
 
-//   xhr.addEventListener('load', function () {
-//     console.log({ xhr });
-//     $tempEl.innerHTML = xhr.responseText;
-//   });
-//   xhr.send();
-// }
+  xhr.addEventListener('load', function () {
+    var $id = document.querySelector('#' + id);
+    $id.innerHTML = '';
+    $id.innerHTML = xhr.responseText;
+  });
+  xhr.send();
+}
 
 // getGraphSVG();
