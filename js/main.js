@@ -100,6 +100,7 @@ function renderGraphs(graphs) {
     $p.textContent = name;
     var $div = document.createElement('div');
     $div.setAttribute('id', graphs[i].id);
+    $div.setAttribute('class', 'graph-container');
     $li.appendChild($p);
     $li.appendChild($div);
     $ul.appendChild($li);

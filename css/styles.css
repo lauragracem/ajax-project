@@ -74,6 +74,8 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 li {
@@ -82,3 +84,9 @@ li {
   letter-spacing: 0.15rem;
   text-align: left;
 }
+
+.graph-container {
+  width: 500px;
+}
+
+/* 'enter habit' input and 'submit' button need to stay in play--set position. */
