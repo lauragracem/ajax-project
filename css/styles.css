@@ -64,7 +64,7 @@ a {
   padding-top: 3rem;
 }
 
-#enter-habit {
+.enter-habit {
   background-color: rgb(238, 110, 115, 0.3);
   border-style: none;
   border-radius: 0.2rem;

@@ -12,7 +12,7 @@ var $loginButton = document.querySelector('.login');
 
 var $guestLogin = document.querySelector('a');
 var $ul = document.querySelector('ul');
-var $enterHabit = document.querySelector('#enter-habit');
+var $enterHabit = document.querySelector('.enter-habit');
 var $addHabit = document.querySelector('#add-habit');
 
 $loginForm.addEventListener('submit', login);
