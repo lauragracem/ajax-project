@@ -3,6 +3,11 @@
   width: 100vw;
 }
 
+.hidden {
+  visibility: hidden;
+  display: none;
+}
+
 .row {
   display: flex;
   justify-content: center;
@@ -25,4 +30,15 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 1rem;
+}
+
+@media screen and (max-width: 400px) {
+  .container {
+    width: 400px;
+    height: auto;
+  }
+
+  img {
+    width: 60rem;
+  }
 }

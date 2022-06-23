@@ -14,7 +14,7 @@
   </header>
   <main>
     <div class="container">
-      <div data-view="user-login">
+      <div class="user-login" data-view="user-login">
         <div class="row images">
           <img src="images/habits.png">
         </div>
@@ -30,10 +30,19 @@
           <a>login as guest</a>
         </div>
       </div>
-      <div class="temp"></div>
+      <div class="habit-form hidden" data-view="habit-form">
+        <div class="row habit">
+          <ul></ul>
+        </div>
+        <div class="row input-field">
+          <form id="add-habit">
+            <input class="enter-habit" placeholder="Enter Habit">
+            <button class="submit" type="submit">SUBMIT</button>
+          </form>
+        </div>
+      </div>
     </div>
   </main>
-  <script src="js/data.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

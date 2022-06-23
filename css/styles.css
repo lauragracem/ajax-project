@@ -10,6 +10,7 @@ form {
 
 input {
   background-color: rgb(238, 110, 115, 0.35);
+  color: white;
   border-style: none;
   border-radius: 0.2rem;
   margin-right: 2rem;
@@ -36,6 +37,7 @@ input:required {
   padding-left: 0.7rem;
   padding-bottom: 0.5rem;
   padding-right: 0.7rem;
+  cursor: pointer;
 }
 
 a {
@@ -46,4 +48,60 @@ a {
   margin-top: 1rem;
   margin-bottom: 1rem;
   letter-spacing: 0.35rem;
+  cursor: pointer;
+}
+
+.habit-form {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.row.habit {
+  display: flex;
+  flex: 1;
+  overflow: auto;
+  padding-top: 3rem;
+}
+
+.enter-habit {
+  background-color: rgb(238, 110, 115, 0.3);
+  border-style: none;
+  border-radius: 0.2rem;
+  margin-right: 2rem;
+  padding: 0.5rem;
+  font-size: 1.1rem;
+  text-align: left;
+}
+
+.submit {
+  border-style: none;
+  border-radius: 0.2rem;
+  background-color: rgb(238, 110, 115, 0.5);
+  color: white;
+  padding: 0.672rem;
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  height: 100%;
+  overflow: auto;
+}
+
+li {
+  color: white;
+  font-family: sans-serif;
+  letter-spacing: 0.15rem;
+  text-align: left;
+}
+
+.graph-container {
+  width: 500px;
+}
+
+.row.input-field {
+  flex: 0;
+  padding-bottom: 5rem;
 }
