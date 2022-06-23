@@ -92,7 +92,7 @@ function getGraphs() {
 }
 
 function renderGraphs(graphs) {
-  $ul.innerHTML = '';
+  $ul.textContent = '';
   for (var i = 0; i < graphs.length; i++) {
     var name = graphs[i].name;
     var $li = document.createElement('li');
@@ -110,12 +110,13 @@ function renderGraphs(graphs) {
 
 function getGraphSVG(id) {
   var xhr = new XMLHttpRequest();
+  xhr.responseType = '';
   xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs/' + id);
   xhr.setRequestHeader('X-USER-TOKEN', secret);
 
   xhr.addEventListener('load', function () {
     var $id = document.querySelector('#' + id);
-    $id.innerHTML = '';
+    $id.textContent = '';
     $id.innerHTML = xhr.responseText;
   });
   xhr.send();
