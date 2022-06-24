@@ -98,10 +98,16 @@ function renderGraphs(graphs) {
     var $li = document.createElement('li');
     var $p = document.createElement('p');
     $p.textContent = name;
+    var $edit = document.createElement('i');
+    $edit.setAttribute('class', 'fas fa-edit');
+    var $column2 = document.createElement('div');
+    $column2.setAttribute('class', 'column2');
     var $div = document.createElement('div');
     $div.setAttribute('id', graphs[i].id);
     $div.setAttribute('class', 'graph-container');
-    $li.appendChild($p);
+    $column2.appendChild($p);
+    $li.appendChild($column2);
+    $column2.appendChild($edit);
     $li.appendChild($div);
     $ul.appendChild($li);
     getGraphSVG(graphs[i].id);

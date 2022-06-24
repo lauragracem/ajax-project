@@ -97,6 +97,12 @@ li {
   text-align: left;
 }
 
+i {
+  position: absolute;
+  margin-left: 30rem;
+  margin-top: -2rem;
+}
+
 .graph-container {
   width: 500px;
 }
