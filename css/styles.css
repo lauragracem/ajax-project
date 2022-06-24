@@ -97,9 +97,9 @@ li {
   text-align: left;
 }
 
-i {
-  margin-left: 30rem;
-}
+/* i {
+  margin-left: 20rem;
+} */
 
 .graph-container {
   width: 500px;
@@ -110,6 +110,8 @@ i {
   padding-bottom: 5rem;
 }
 
-.edit-form > p {
-  margin-top: -3rem;
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }

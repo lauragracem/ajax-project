@@ -34,7 +34,9 @@ function switchView(view) {
   if (view === 'habit-form') {
     $userLogin.classList.add('hidden');
     $habitForm.classList.remove('hidden');
-  } else if (view === 'edit-form') {
+  }
+
+  if (view === 'edit-form') {
     $habitForm.classList.add('hidden');
     $editForm.classList.remove('hidden');
   }
@@ -125,14 +127,14 @@ function renderGraphs(graphs) {
     $edit.addEventListener('click', () => {
       switchView('edit-form');
     });
-    var $column2 = document.createElement('div');
-    $column2.setAttribute('class', 'column2');
+    var $habitHeader = document.createElement('div');
+    $habitHeader.setAttribute('class', 'habit-header');
     var $div = document.createElement('div');
     $div.setAttribute('id', graphs[i].id);
     $div.setAttribute('class', 'graph-container');
-    $column2.appendChild($p);
-    $li.appendChild($column2);
-    $column2.appendChild($edit);
+    $habitHeader.appendChild($p);
+    $li.appendChild($habitHeader);
+    $habitHeader.appendChild($edit);
     $li.appendChild($div);
     $ul.appendChild($li);
     getGraphSVG(graphs[i].id);
