@@ -107,22 +107,24 @@ function renderGraphs(graphs) {
     var $edit = document.createElement('i');
     $edit.setAttribute('class', 'fa-solid fa-eraser');
     $edit.addEventListener('click', function () {
-      // console.log('Over Here! Workingggg');
     });
     var $delete = document.createElement('i');
     $delete.setAttribute('class', 'fa-solid fa-trash-can');
-    $delete.addEventListener('click', function () {
-      // console.log('I work toooo');
+    $delete.setAttribute('data-habit-id', graphs[i].id);
+    $delete.addEventListener('click', function (e) {
+      deleteGraph(e.target.getAttribute('data-habit-id'));
     });
+    var $span = document.createElement('span');
     var $habitHeader = document.createElement('div');
     $habitHeader.setAttribute('class', 'habit-header');
     var $div = document.createElement('div');
     $div.setAttribute('id', graphs[i].id);
     $div.setAttribute('class', 'graph-container');
     $habitHeader.appendChild($p);
+    $habitHeader.appendChild($span);
     $li.appendChild($habitHeader);
-    $habitHeader.appendChild($edit);
-    $habitHeader.appendChild($delete);
+    $span.appendChild($edit);
+    $span.appendChild($delete);
     $li.appendChild($div);
     $ul.appendChild($li);
     getGraphSVG(graphs[i].id);
@@ -138,6 +140,20 @@ function getGraphSVG(id) {
     var $id = document.querySelector('#' + id);
     $id.innerHTML = '';
     $id.innerHTML = xhr.responseText;
+  });
+  xhr.send();
+}
+
+function deleteGraph(id) {
+  var xhr = new XMLHttpRequest();
+  xhr.open('DELETE', 'https://pixe.la/v1/users/' + username + '/graphs/' + id);
+  xhr.setRequestHeader('X-USER-TOKEN', secret);
+
+  xhr.addEventListener('load', function () {
+    data.graphs = data.graphs.filter(function (graph) {
+      return graph.id !== id;
+    });
+    renderGraphs(data.graphs);
   });
   xhr.send();
 }

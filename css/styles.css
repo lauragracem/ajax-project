@@ -97,10 +97,6 @@ li {
   text-align: left;
 }
 
-/* i {
-  margin-left: 20rem;
-} */
-
 .graph-container {
   width: 500px;
 }
@@ -110,8 +106,7 @@ li {
   padding-bottom: 5rem;
 }
 
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
+i {
+  padding-left: 0.8rem;
+  cursor: pointer;
 }
