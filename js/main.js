@@ -83,24 +83,6 @@ function createGraph() {
   xhr.send(JSON.stringify(json));
 }
 
-// function editHabit() {
-//   var editJson = {
-//     id: $enterHabit.value,
-//     name: $enterHabit.value,
-//     unit: 'commit',
-//     type: 'int',
-//     color: 'ichou'
-//   };
-
-//   var findIndex = data.graphs.findIndex(function (element) {
-//     return element.id === data.$enterHabit.value;
-//   });
-//   data.graphs[findIndex] = editJson;
-
-//   renderGraphs(data.graphs);
-
-// }
-
 function getGraphs() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs');
@@ -123,9 +105,14 @@ function renderGraphs(graphs) {
     var $p = document.createElement('p');
     $p.textContent = name;
     var $edit = document.createElement('i');
-    $edit.setAttribute('class', 'fas fa-edit');
-    $edit.addEventListener('click', () => {
-      switchView('edit-form');
+    $edit.setAttribute('class', 'fa-solid fa-eraser');
+    $edit.addEventListener('click', function () {
+      // console.log('Over Here! Workingggg');
+    });
+    var $delete = document.createElement('i');
+    $delete.setAttribute('class', 'fa-solid fa-trash-can');
+    $delete.addEventListener('click', function () {
+      // console.log('I work toooo');
     });
     var $habitHeader = document.createElement('div');
     $habitHeader.setAttribute('class', 'habit-header');
@@ -135,6 +122,7 @@ function renderGraphs(graphs) {
     $habitHeader.appendChild($p);
     $li.appendChild($habitHeader);
     $habitHeader.appendChild($edit);
+    $habitHeader.appendChild($delete);
     $li.appendChild($div);
     $ul.appendChild($li);
     getGraphSVG(graphs[i].id);
@@ -160,3 +148,6 @@ function getGraphSVG(id) {
 
 // date: daily
 // quantity(time in minutes): 1 = 10, 2 = 15, 3 = 20, 4 = 25, 5 = 30, 6 = 40, 7 = 45, 8 = 50, 9 = 60
+
+// FOCUS:
+// PUll individual graphs onto edit form page.
