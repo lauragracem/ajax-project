@@ -109,3 +109,7 @@ i {
   flex: 0;
   padding-bottom: 5rem;
 }
+
+.edit-form > p {
+  margin-top: -3rem;
+}

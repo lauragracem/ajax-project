@@ -8,6 +8,7 @@ var data = {
 var $loginForm = document.querySelector('#login-form');
 var $userLogin = document.querySelector('.user-login');
 var $habitForm = document.querySelector('.habit-form');
+var $editForm = document.querySelector('.edit-form');
 var $loginButton = document.querySelector('.login');
 
 var $guestLogin = document.querySelector('a');
@@ -33,6 +34,9 @@ function switchView(view) {
   if (view === 'habit-form') {
     $userLogin.classList.add('hidden');
     $habitForm.classList.remove('hidden');
+  } else if (view === 'edit-form') {
+    $habitForm.classList.add('hidden');
+    $editForm.classList.remove('hidden');
   }
 }
 
@@ -77,6 +81,24 @@ function createGraph() {
   xhr.send(JSON.stringify(json));
 }
 
+// function editHabit() {
+//   var editJson = {
+//     id: $enterHabit.value,
+//     name: $enterHabit.value,
+//     unit: 'commit',
+//     type: 'int',
+//     color: 'ichou'
+//   };
+
+//   var findIndex = data.graphs.findIndex(function (element) {
+//     return element.id === data.$enterHabit.value;
+//   });
+//   data.graphs[findIndex] = editJson;
+
+//   renderGraphs(data.graphs);
+
+// }
+
 function getGraphs() {
   var xhr = new XMLHttpRequest();
   xhr.open('GET', 'https://pixe.la/v1/users/' + username + '/graphs');
@@ -101,6 +123,7 @@ function renderGraphs(graphs) {
     var $edit = document.createElement('i');
     $edit.setAttribute('class', 'fas fa-edit');
     $edit.addEventListener('click', () => {
+      switchView('edit-form');
     });
     var $column2 = document.createElement('div');
     $column2.setAttribute('class', 'column2');
