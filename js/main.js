@@ -100,6 +100,8 @@ function renderGraphs(graphs) {
     $p.textContent = name;
     var $edit = document.createElement('i');
     $edit.setAttribute('class', 'fas fa-edit');
+    $edit.addEventListener('click', () => {
+    });
     var $column2 = document.createElement('div');
     $column2.setAttribute('class', 'column2');
     var $div = document.createElement('div');
@@ -126,3 +128,10 @@ function getGraphSVG(id) {
   });
   xhr.send();
 }
+
+// 0-9 commits has to quantify minutes.
+// how will user record habit in minutes? Can they just push square on graph? Do I need another button?
+// function for inputting date automatically.
+
+// date: daily
+// quantity(time in minutes): 1 = 10, 2 = 15, 3 = 20, 4 = 25, 5 = 30, 6 = 40, 7 = 45, 8 = 50, 9 = 60
