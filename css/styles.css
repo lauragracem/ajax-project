@@ -74,7 +74,8 @@ a {
   text-align: left;
 }
 
-.submit {
+.submit,
+.save {
   border-style: none;
   border-radius: 0.2rem;
   background-color: rgb(238, 110, 115, 0.5);
@@ -104,4 +105,15 @@ li {
 .row.input-field {
   flex: 0;
   padding-bottom: 5rem;
+}
+
+i {
+  padding-left: 0.8rem;
+  cursor: pointer;
+}
+
+#edit-habit {
+  display: flex;
+  justify-content: center;
+  padding-top: 15rem;
 }

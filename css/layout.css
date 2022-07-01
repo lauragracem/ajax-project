@@ -3,11 +3,6 @@
   width: 100vw;
 }
 
-.hidden {
-  visibility: hidden;
-  display: none;
-}
-
 .row {
   display: flex;
   justify-content: center;
@@ -32,6 +27,12 @@ img {
   margin-top: 1rem;
 }
 
+.habit-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media screen and (max-width: 400px) {
   .container {
     width: 400px;
@@ -41,4 +42,9 @@ img {
   img {
     width: 60rem;
   }
+}
+
+.hidden,
+.habit-form.hidden {
+  display: none;
 }
